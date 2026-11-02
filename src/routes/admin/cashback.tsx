@@ -18,7 +18,7 @@ const FILTERS: { id: PeriodId | "semua"; label: string }[] = [
 
 function invoiceWhen(iso: string) {
   const day = String(iso ?? "").slice(0, 10);
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(day)) return { hari: "\u2014", tanggal: iso || "\u2014" };
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(day)) return { hari: "—", tanggal: iso || "—" };
   const [y, m, d] = day.split("-").map(Number);
   const dt = new Date(Date.UTC(y, m - 1, d));
   const hari = dt.toLocaleDateString("id-ID", { weekday: "long", timeZone: "UTC" });
@@ -235,7 +235,7 @@ function CashbackRecap() {
                         disabled={savingId === row.id}
                         onClick={() => void onSave(row.id)}
                       >
-                        {savingId === row.id ? "Menyimpan\u2026" : "Simpan"}
+                        {savingId === row.id ? "Menyimpan…" : "Simpan"}
                       </Button>
                     </td>
                   </tr>
