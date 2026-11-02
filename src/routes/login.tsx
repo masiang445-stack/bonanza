@@ -25,7 +25,6 @@ function homeForRole(role: string, dest: string) {
 function Login() {
   const { redirect } = Route.useSearch();
   const navigate = useNavigate();
-  const { user, isPending } = useCurrentUserState();
   const dest = redirect && redirect.startsWith("/") ? redirect : "/";
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -47,7 +46,7 @@ function Login() {
       setUsernameError("Username wajib diisi.");
       ok = false;
     } else if (!isValidUsername(user)) {
-      setUsernameError("Username 3\u201332 karakter: huruf, angka, titik, strip, atau underscore.");
+      setUsernameError("Username 3–32 karakter: huruf, angka, titik, strip, atau underscore.");
       ok = false;
     } else {
       setUsernameError("");
@@ -147,7 +146,7 @@ function Login() {
             </div>
             {error ? <p className="text-sm text-accent">{error}</p> : null}
             <Button type="submit" className="w-full" disabled={pending}>
-              {pending ? "Memproses\u2026" : "Masuk"}
+              {pending ? "Memproses…" : "Masuk"}
             </Button>
           </>
         )}
