@@ -22,7 +22,7 @@ export function PasswordRules({ password }: { password: string }) {
                 idle ? "bg-primary/10 text-muted" : ok ? "bg-primary text-primary-fg" : "bg-accent/15 text-accent",
               )}
             >
-              {idle ? "\u00b7" : ok ? "\u2713" : "!"}
+              {idle ? "·" : ok ? "✓" : "!"}
             </span>
             {rule.label}
           </li>
