@@ -1,0 +1,36 @@
+update products set stock = 'ready' where stock in ('tersedia', 'ready', '');
+update products set stock = 'soldout' where stock in ('terbatas', 'soldout');
+alter table products alter column stock set default 'ready';
+
+update products set description = 'Semangka merah tanpa biji. Daging merata, berair, dipotong dingin sebelum dikirim.'
+where slug = 'semangka-merah-non-biji';
+update products set description = 'Semangka merah klasik berbiji. Daging tebal, kulit hijau belang, cocok untuk porsi keluarga.'
+where slug = 'semangka-merah-biji';
+update products set description = 'Semangka daging kuning madu dengan biji hitam. Lebih harum dan padat dari yang merah.'
+where slug = 'semangka-kuning-biji';
+update products set description = 'Melon madu lokal. Daging pucat, harum ketika matang makan, manis seperti madu.'
+where slug = 'melon-madu';
+update products set description = 'Melon Sakata berdaging oranye. Kulit jaring rapat, tekstur padat, rasa manis bersih.'
+where slug = 'melon-sakata';
+update products set description = 'Jeruk keprok Medan. Kulit longgar, daging oranye, mudah dikupas, banyak air.'
+where slug = 'jeruk-medan';
+update products set description = 'Jeruk siem kecil berkulit tipis. Rasa khas pasar Indonesia, manis dengan sedikit pahit kulit.'
+where slug = 'jeruk-siem';
+update products set description = 'Kelengkeng matang. Kulit cokelat tipis, daging bening berair, tidak kering.'
+where slug = 'kelengkeng';
+update products set description = 'Apel Fuji krispi. Daging putih, manis merata, cocok dimakan langsung atau jus.'
+where slug = 'apel-fuji';
+update products set description = 'Pear matang makan. Daging putih renyah sampai lembut di inti, juicy, manis ringan.'
+where slug = 'pear';
+update products set description = 'Anggur Australia red globe. Berry besar, kulit tebal, manis dengan tannin ringan.'
+where slug = 'anggur-ausy';
+update products set description = 'Anggur meja RRC. Berry merah-ungu, juicy, pilihan harian dengan harga lebih ramah.'
+where slug = 'anggur-rrc';
+update products set description = 'Anggur muscat hijau (shine muscat). Kulit dimakan, aroma musk, manis dan renyah.'
+where slug = 'anggur-muscat-hijau';
+update products set description = 'Buah naga daging putih atau merah. Kulit magenta, dipetik matang, biji renyah.'
+where slug = 'buah-naga';
+update products set description = 'Manggis segmen putih utuh. Kulit ungu tidak getas kering, manis-asam floral.'
+where slug = 'manggis';
+update products set description = 'Pisang Cavendish sisir. Kuning merata, creamy, tidak terlalu matang saat dikirim.'
+where slug = 'pisang-cavendish';
